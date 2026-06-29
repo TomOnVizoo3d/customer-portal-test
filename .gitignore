@@ -9,10 +9,9 @@ node_modules/
 
 # Configuration
 .env
-.env.*
+.env
 .dumps/*
 .mariadb/*
-!wp-config.php
 
 # WordPress Core
 /wp-admin/
@@ -22,6 +21,7 @@ node_modules/
 /xmlrpc.php
 /license.txt
 /readme.html
+!wp-config.php
 
 # Erlaube Git, wp-content zu betreten, aber ignoriere standardmäßig den Inhalt
 !wp-content/
