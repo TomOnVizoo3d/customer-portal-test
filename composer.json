@@ -1,0 +1,61 @@
+{
+    "name": "tom-schler/customer-portal-test",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "johnpbloch/wordpress": "^6.5",
+        "composer/installers": "^2.0",
+        "wpackagist-plugin/add-from-server": "^3.4.5",
+        "wpackagist-plugin/advanced-custom-fields": "^6.8.4",
+        "wpackagist-plugin/auto-upload-images": "^3.3.2",
+        "wpackagist-plugin/bbspoiler": "^2.02",
+        "wpackagist-plugin/breadcrumb": "^1.5.54",
+        "wpackagist-plugin/enable-media-replace": "^4.2.0",
+        "wpackagist-plugin/joli-table-of-contents": "^3.0.2",
+        "wpackagist-plugin/learnpress": "^4.4.0",
+        "wpackagist-plugin/nav-menu-collapse": "^2.1.6",
+        "wpackagist-plugin/real-cookie-banner": "^5.2.25",
+        "wpackagist-plugin/svg-support": "^2.5.16",
+        "wpackagist-plugin/tablepress": "^3.3.2",
+        "wpackagist-plugin/use-any-font": "^6.3.14",
+        "wpackagist-plugin/user-access-manager": "^2.3.12",
+        "wpackagist-plugin/user-role-editor": "^4.65",
+        "wpackagist-plugin/video-embed-thumbnail-generator": "^4.10.5",
+        "wpackagist-plugin/wp-2fa": "^3.1.1.2",
+        "wpackagist-plugin/wp-force-login": "^5.6.3",
+        "wpackagist-plugin/wp-crontrol": "^1.21.0",
+        "wpackagist-plugin/wp-media-category-management": "^2.5.1",
+        "wpackagist-plugin/wp-members": "^3.5.6",
+        "wpackagist-plugin/wpfront-scroll-top": "^3.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TomSchler\\CustomerPortalTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tom Schler"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "wp-content/themes/{$name}/": ["type:wordpress-theme"],
+            "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+        },
+        "wordpress-install-dir": "./"
+    }
+}

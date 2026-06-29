@@ -1,0 +1,19 @@
+AuthType Basic
+AuthName "Customers Production"
+AuthUserFile /home/vizoo/auth/customers_production/.htpasswd
+Require valid-user
+Require ip 176.95.165.89
+
+
+# Allow admin-ajax.php without auth (front-end AJAX needs this)
+<Files "admin-ajax.php">
+  AuthType None
+  Require all granted
+</Files>
+
+# Allow login page assets without auth (login page itself is at wp-login.php
+# in the document root, but it loads CSS/JS from /wp-admin/css and /wp-admin/js)
+<FilesMatch "\.(css|js|png|jpe?g|gif|svg|woff2?|ttf|eot|ico|map)$">
+  AuthType None
+  Require all granted
+</FilesMatch>

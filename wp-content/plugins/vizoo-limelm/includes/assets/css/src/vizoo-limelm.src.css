@@ -1,0 +1,364 @@
+/**
+ * Stylesheet for the Vizoo LimeLM integration plugin.
+ *
+ * This stylesheet is loaded if the shortcode for this plugin is present in the requested
+ * page. It defines the styles for the elements displaying the licenses.
+ *
+ */
+
+.vizoo-limelm-loader {
+    width: 7em;
+    height: 7em;
+    margin: 0 auto;
+}
+
+textarea {
+    padding: 0.5rem;
+    resize: none;
+    border: 1px solid #cedde0;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    width: calc(100% - 1rem);
+}
+
+textarea:focus {
+    outline: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#vizoo-limelm-popup-loader {
+    height: initial;
+}
+
+#vizoo-limelm-wrapper {
+    font-size: 0.9rem;
+}
+
+#vizoo-limelm-header>h1 {
+    font-weight: lighter;
+    font-size: 1.7em;
+    line-height: 1;
+    margin: 0 0 1em;
+}
+
+#vizoo-limelm-header {
+    margin: 0 0 1em;
+    line-height: 1.75em;
+    padding: 0 0 0.5em;
+}
+
+.vizoo-limelm-license-wrapper {
+    margin-bottom: 3.5em;
+    width: 40em;
+}
+
+.vizoo-limelm-license-title {
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 1.7em;
+    line-height: 1;
+    margin: 0 0 1em;
+    padding-bottom: 0.2em;
+}
+
+.vizoo-limelm-license-warning {
+    font-size: 0.5em;
+    font-weight: normal;
+    float: right;
+    background-color: #cc0000;
+    color: white;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.vizoo-limelm-license-details {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.vizoo-limelm-license-details td {
+    background-color: #eaeaef;
+    border: 2px solid white;
+    padding: 0.2em 0.5em;
+}
+
+.vizoo-limelm-license-details td:first-child {
+    border-left: 0;
+}
+
+.vizoo-limelm-license-details td:last-child {
+    border-right: 0;
+}
+
+.vizoo-limelm-license-details tr:first-child td {
+    border-top: 0;
+}
+
+.vizoo-limelm-license-details tr:last-child td {
+    border-bottom: 0;
+}
+
+.vizoo-limelm-license-info-label {
+    text-align: right;
+}
+
+.vizoo-limelm-license-key {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.vizoo-limelm-license-expires-soon {
+    color: #cc0000;
+}
+
+.vizoo-limelm-license-renewal-pending {
+    color: #00bfbf;
+    font-size: 0.85rem;
+}
+
+.vizoo-limelm-license-actions {
+    display: flex;
+
+    .button-medium:first-child {
+        margin-right: 1rem;
+    }
+
+    .button-medium:nth-child(2){
+        background-color: #bfbfbf;
+    }
+
+    .button-medium:nth-child(2):hover{
+        background-color: #b62e2e;
+    }
+}
+
+
+.fa-solid {
+    margin-right: 0.5rem;
+}
+
+.vizoo-limelm-activations {
+    border-collapse: collapse;
+    border: 1px solid #404040;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.vizoo-limelm-activations td,
+.vizoo-limelm-activations th {
+    padding: 0.2em 0.5em;
+}
+
+.vizoo-limelm-activation-index {
+    text-align: right;
+    width: 2.25em;
+}
+
+.vizoo-limelm-activation-platform {
+    width: 2.25em;
+}
+
+.vizoo-limelm-activation-address {
+    width: 17em;
+}
+
+.vizoo-limelm-activation-date {
+    width: 8.25em;
+}
+
+.vizoo-limelm-hoverable:hover {
+    background-color: #eaeaef;
+}
+
+/* License popup window */
+#vizoo-limelm-license-popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vizoo-limelm-license-popup-container {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+#vizoo-limelm-license-popup-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#vizoo-limelm-license-popup-button-close {
+    color: #002b2b;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+#vizoo-limelm-license-popup-button-close:hover {
+    color: #cc0000;
+}
+
+#vizoo-limelm-license-popup-form {
+    padding: 0.5rem;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+}
+
+.vizoo-limelm-license-popup-fieldset {
+    margin: 0 0 1em;
+    padding: 0;
+    border: 0;
+}
+
+.vizoo-limelm-license-popup-contact div {
+    display: flex;
+    margin-bottom: 0.25em;
+    align-items: baseline;
+}
+
+.vizoo-limelm-license-popup-contact label {
+    width: 11em;
+    flex-shrink: 0;
+}
+
+.vizoo-limelm-license-popup-contact input {
+    flex-grow: 1;
+}
+
+#vizoo-limelm-license-renewal-billing-zip {
+    width: 7em;
+    margin-right: 0.4em;
+}
+
+#vizoo-limelm-license-renewal-billing-city {
+    flex-grow: 1;
+}
+
+#vizoo-limelm-license-renewal-po-number {
+    margin-right: 0.4em;
+    flex-shrink: 1;
+    width: 120px;
+}
+
+#vizoo-limelm-license-renewal-upload {
+    background-color: #00bfbf;
+    color: white;
+    padding: 0.4em 0.6em;
+    border-radius: 3px;
+    width: initial;
+    cursor: pointer;
+}
+
+#vizoo-limelm-license-renewal-upload span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 12em;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+#vizoo-limelm-license-renewal-key,
+#vizoo-limelm-license-cancellation-key {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.vizoo-limelm-license-renewal-selection {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 0.25em 0.5em;
+    border: 1px solid #c2c8cd;
+    font-size: 1em;
+    background-color: #fff;
+    background-image: url("../img/select-arrow.png");
+    background-position: right 0.4em center;
+    background-repeat: no-repeat;
+}
+
+#vizoo-limelm-license-renewal-activations {
+    width: 6em;
+}
+
+.vizoo-limelm-license-renewal-selection:hover,
+.vizoo-limelm-license-renewal-selection:focus,
+#vizoo-limelm-license-renewal-comment:hover,
+#vizoo-limelm-license-renewal-comment:focus {
+    box-shadow: 0px 0px 4px #c2c8cd;
+}
+
+#vizoo-limelm-license-renewal-popup-disclaimer {
+    font-size: 0.75em;
+}
+
+#vizoo-limelm-license-popup-control {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5rem;
+
+    .button-medium:first-child {
+        margin-right: 1rem;
+    }
+
+    .button-medium:nth-child(2){
+        background-color: #bfbfbf;
+    }
+
+    .button-medium:nth-child(2):hover{
+        background-color: #b62e2e;
+    }
+}
+
+#vizoo-limelm-license-popup-control button {
+    margin-left: 0;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.vizoo-limelm-license-popup-special-request {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 38em) {
+    #vizoo-limelm-license-popup-container {
+        width: 36em;
+    }
+}

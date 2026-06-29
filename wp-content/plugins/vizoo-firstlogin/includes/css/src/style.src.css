@@ -1,0 +1,103 @@
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+    color: #002b2b;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+span {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+h1:nth-child(3) {
+    margin: 0.5rem 0 1rem 0;
+}
+
+.welcome-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.firstlogin-body {
+    width: 18rem;
+    background-color: #f7f7f7;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    text-align: center;
+    color: #002b2b;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 11.5rem;
+    object-fit: contain;
+}
+
+#password-set-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.password-set {
+    border: 1px solid #cedde0;
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #002b2b;
+    min-height: 2.5rem;
+    padding: 0 0 0 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.password-set-label {
+    margin-left: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: #002b2b;
+}
+
+.password-set:focus {
+    outline: none;
+    border: 1px solid #00bfbf;
+}
+
+#password-set-btn {
+    background-color: #00bfbf;
+    min-height: 2.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.privacy-policy-link {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+#password-set-err {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #b62e2e;
+}

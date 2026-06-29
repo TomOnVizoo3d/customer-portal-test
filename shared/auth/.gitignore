@@ -1,0 +1,19 @@
+#ignore build directory
+build/
+#ignore vscode directory content
+.vscode/*
+#but add lauch.json
+!.vscode/launch.json
+#ignore ide files
+*.user
+#ignore python files
+__pycache__/
+#ignore npm packages
+node_modules/
+#ignore latex stuff
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz

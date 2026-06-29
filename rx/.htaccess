@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "RX"
+AuthUserFile /home/vizoo/apps/customers/rx/.htpasswd
+require valid-user

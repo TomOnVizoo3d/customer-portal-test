@@ -1,0 +1,45 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies
+/vendor/
+node_modules/
+
+# Configuration
+wp-config.php
+.env
+.env.*
+.dumps/*
+.mariadb/*
+
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/license.txt
+/readme.html
+
+# Erlaube Git, wp-content zu betreten, aber ignoriere standardmäßig den Inhalt
+!wp-content/
+wp-content/*
+
+# Cache & Backups explizit ignorieren
+wp-content/cache/
+wp-content/backup*/
+
+# Erlaube den Themes-Ordner, ignoriere alle Themes, außer 'vizoo'
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/vizoo/
+
+# Erlaube den Plugins-Ordner, ignoriere alle Plugins...
+!wp-content/plugins/
+wp-content/plugins/*
+
+# ...AUẞER deine eigenen Custom-Plugins:
+!wp-content/plugins/vizoo*
+!wp-content/plugins/ajax-search-pro/

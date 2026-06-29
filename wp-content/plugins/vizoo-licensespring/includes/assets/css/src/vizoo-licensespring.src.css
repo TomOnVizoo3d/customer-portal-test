@@ -1,0 +1,329 @@
+/**
+ * Stylesheet for the Vizoo LicenseSpring integration plugin.
+ *
+ * This stylesheet is loaded if the shortcode for this plugin is present in the requested
+ * page. It defines the styles for the elements displaying the licenses.
+ *
+ */
+
+.vizoo-licensespring-loader {
+    width: 7em;
+    height: 7em;
+    margin: 0 auto;
+}
+
+input,
+select {
+    border-radius: 0.5rem;
+    border: 1px solid #cedde0;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+fieldset {
+    gap: 0.5rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#vizoo-licensespring-popup-loader {
+    height: initial;
+}
+
+.vizoo-licensespring-license-info-label {
+    text-align: right;
+    vertical-align: top;
+}
+
+.vizoo-licensespring-license-users-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.vizoo-licensespring-license-expires-soon {
+    color: #cc0000;
+}
+
+.vizoo-licensespring-license-renewal-pending {
+    color: #00bfbf;
+    font-size: 0.85rem;
+}
+
+.vizoo-licensespring-activations {
+    border-collapse: collapse;
+    border: 1px solid #404040;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.vizoo-licensespring-activations td,
+.vizoo-licensespring-activations th {
+    padding: 0.2em 0.5em;
+}
+
+.vizoo-licensespring-activation-index {
+    text-align: right;
+    width: 2.25em;
+}
+
+.vizoo-licensespring-activation-platform {
+    width: 2.25em;
+}
+
+.vizoo-licensespring-activation-address {
+    width: 17em;
+}
+
+.vizoo-licensespring-activation-date {
+    width: 8.25em;
+}
+
+.vizoo-licensespring-hoverable:hover {
+    background-color: #eaeaef;
+}
+
+/* License popup window */
+#vizoo-licensespring-license-popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#vizoo-licensespring-license-popup-container {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #cedde0;
+    transition: all ease-in-out 125ms;
+}
+
+#vizoo-licensespring-license-popup-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#vizoo-licensespring-license-renewal-sendme {
+    display: flex;
+
+    input[type="radio"]:after {
+        background-color: #00bfbf;
+    }
+
+    input[type="radio"]:checked:after {
+        background-color: #00bfbf;
+    }
+}
+
+#vizoo-licensespring-license-popup-button-close {
+    color: #002b2b;
+    font-size: 1rem;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#vizoo-licensespring-license-popup-button-close:hover {
+    color: #cc0000;
+}
+
+#vizoo-licensespring-license-popup-form {
+    padding: 0.5em;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+}
+
+.vizoo-licensespring-license-popup-fieldset {
+    margin: 0 0 1em;
+    padding: 0;
+    border: 0;
+
+    input {
+        height: 1.5rem;
+    }
+}
+
+.vizoo-licensespring-license-popup-contact div {
+    display: flex;
+    margin-bottom: 0.25em;
+    align-items: baseline;
+}
+
+.vizoo-licensespring-license-popup-contact label {
+    width: 11em;
+    flex-shrink: 0;
+}
+
+.vizoo-licensespring-license-popup-contact input {
+    flex-grow: 1;
+}
+
+#vizoo-licensespring-license-renewal-billing-zip {
+    width: 7em;
+    margin-right: 0.4em;
+}
+
+#vizoo-licensespring-license-renewal-billing-city {
+    flex-grow: 1;
+}
+
+#vizoo-licensespring-license-renewal-po-number {
+    margin-right: 0.4em;
+    flex-shrink: 1;
+    width: 120px;
+}
+
+#vizoo-licensespring-license-renewal-key,
+#vizoo-licensespring-license-cancellation-key {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.vizoo-licensespring-license-renewal-selection {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 0.25em 0.5em;
+    border: 1px solid #c2c8cd;
+    font-size: 1em;
+    background-color: #fff;
+    background-image: url("../img/select-arrow.png");
+    background-position: right 0.4em center;
+    background-repeat: no-repeat;
+}
+
+#vizoo-licensespring-license-renewal-activations {
+    width: 6em;
+}
+
+#vizoo-licensespring-license-renewal-comment,
+#vizoo-licensespring-license-cancellation-comment {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    border: 1px solid #cedde0;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+#vizoo-licensespring-license-renewal-comment:focus,
+#vizoo-licensespring-license-cancellation-comment:focus {
+    outline: none;
+}
+
+.vizoo-licensespring-license-renewal-selection:hover,
+.vizoo-licensespring-license-renewal-selection:focus,
+#vizoo-licensespring-license-renewal-comment:hover,
+#vizoo-licensespring-license-renewal-comment:focus {
+    box-shadow: 0px 0px 4px #c2c8cd;
+}
+
+#vizoo-licensespring-license-renewal-popup-disclaimer {
+    font-size: 0.75em;
+}
+
+#vizoo-licensespring-license-popup-control {
+    display: flex;
+    justify-content: end;
+    padding: 1rem 0.5rem;
+
+    .invoice-disclaimer {
+        max-width: 50%;
+        margin: 0;
+    }
+
+    .button-medium:first-child {
+        margin-right: 0.5rem;
+
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .button-medium:nth-child(2) {
+        background-color: #bfbfbf;
+        color: #002b2b;
+        transition: ease-in-out all 125ms;
+    }
+
+    .button-medium:nth-child(2):hover {
+        background-color: #b62e2e;
+        color: #fff;
+    }
+
+    .control-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-container {
+        display: flex;
+
+        .button-medium:disabled {
+            background-color: #bfbfbf;
+            color: #002b2b;
+        }
+    }
+}
+
+.po-upload-container {
+    padding: 0;
+    border: none;
+
+    .po-inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 2.5rem;
+
+        .po-number {
+            display: flex;
+
+            input {
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 38em) {
+    #vizoo-licensespring-license-popup-container {
+        width: 36em;
+    }
+}
+
+@media only screen and (min-height: 52em) {
+    #vizoo-licensespring-license-popup-container {
+        margin-top: 4em;
+        height: initial;
+    }
+}

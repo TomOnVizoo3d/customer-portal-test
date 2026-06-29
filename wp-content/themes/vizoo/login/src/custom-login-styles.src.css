@@ -1,0 +1,127 @@
+a {
+    color: #00bfbf !important;
+    font-weight: 600;
+}
+
+.login {
+    background-color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    .notice {
+        p {
+            color: #002b2b;
+            text-align: center;
+        }
+    }
+}
+
+.login h1 a {
+    background-image: url("/logo.svg");
+    background-size: contain;
+    background-position: center;
+    width: 18rem;
+    height: 5.13rem;
+}
+
+#login {
+    background-color: #f7f7f7 !important;
+    border-radius: 0.5rem !important;
+    padding: 2rem 1rem !important;
+}
+
+#customer-portal-title {
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #002b2b !important;
+}
+
+#loginform,
+#lostpasswordform {
+    border: none !important;
+    background-color: #f7f7f7 !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+#wp-submit {
+    background-color: #00bfbf !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    width: 100% !important;
+    padding: 0.5rem !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+#login form p.submit {
+    padding: 1rem 0 0 0 !important;
+    width: 100% !important;
+}
+
+.wp-hide-pw {
+    color: #00bfbf !important;
+    top: 0 !important;
+}
+
+#user_login,
+#user_pass {
+    border: 1px solid #cedde0 !important;
+    border-radius: 0.5rem !important;
+    background: #fff !important;
+    color: #002b2b !important;
+    box-shadow: none !important;
+}
+
+#user_login:focus,
+#user_pass:focus {
+    border: 1px solid #00bfbf !important;
+}
+
+.forgetmenot {
+    display: flex !important;
+    justify-content: center;
+}
+
+#rememberme {
+    margin: 0 !important;
+    border: 1px solid #cedde0 !important;
+}
+
+#login form label:not([for=rememberme]) {
+    color: #002b2b !important;
+    font-weight: normal !important;
+    font-size: 1rem !important;
+}
+
+label {
+    color: #00bfbf !important;
+    font-weight: 600 !important;
+    margin: 0 0 0 0.5rem !important;
+    line-height: 1.25 !important;
+    font-size: 14px !important
+}
+
+#backtoblog {
+    display: none !important;
+}
+
+#nav {
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.privacy-policy-page-link {
+    margin: 1rem 0 0 0 !important;
+}
+
+.privacy-policy-link {
+    text-decoration: none !important;
+}

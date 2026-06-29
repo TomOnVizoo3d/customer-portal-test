@@ -1,0 +1,31 @@
+services:
+  customer-portal:
+    build: .
+    restart: always
+    init: true
+    ports:
+      - "8090:80"
+    volumes:
+      - .:/var/www/html
+    env_file:
+      - ./.env
+    depends_on:
+      - database
+    networks:
+      - default
+
+  database:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: customers
+    volumes:
+      - .mariadb:/var/lib/mysql:Z
+      - .dumps:/docker-entrypoint-initdb.d:ro,Z
+    networks:
+      - default
+    deploy:
+      resources:
+        limits:
+          memory: 2G
