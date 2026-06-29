@@ -56,6 +56,9 @@
             "wp-content/themes/{$name}/": ["type:wordpress-theme"],
             "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"]
         },
-        "wordpress-install-dir": "./"
+        "wordpress-install-dir": "./",
+        "wordpress-core-installer": {
+            "generator-exclude": ["composer.json"]
+        }
     }
 }
