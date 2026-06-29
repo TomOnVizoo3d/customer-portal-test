@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VersionrequestResponse",
+  "description": "Response schema of the versionrequest endpoint",
+  "type": "object",
+  "properties": {
+    "availableVersions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "major": {
+            "type": "string"
+          },
+          "minor": {
+            "type": "string"
+          },
+          "patch": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "exeurl": {
+            "type": "string"
+          },
+          "zipurl": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "changelogPostId": {
+            "type": "string"
+          }
+        },
+        "required": ["major", "minor", "patch", "date", "message"],
+        "anyOf": [
+          {
+            "required": ["exeurl"]
+          },
+          {
+            "required": ["zipurl"]
+          }
+        ],
+        "additionalProperties": false
+      }
+    },
+    "allowed": {
+      "type": "boolean"
+    },
+    "disallowedMessage": {
+      "type": ["string", "null"]
+    }
+  },
+  "if": {
+    "properties": {
+      "allowed": {
+        "const": false
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "disallowedMessage": {
+        "type": "string"
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "disallowedMessage": {
+        "type": "null"
+      }
+    }
+  },
+  "required": ["availableVersions", "allowed", "disallowedMessage"],
+  "additionalProperties": false
+}

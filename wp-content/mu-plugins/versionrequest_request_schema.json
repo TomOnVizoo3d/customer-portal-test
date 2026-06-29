@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VersionrequestRequest",
+  "description": "Request schema for the body of the versionrequest endpoint",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "object",
+          "properties": {
+            "major": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minor": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "patch": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": ["major", "minor", "patch"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["version"],
+      "additionalProperties": false
+    },
+    "payload": {
+      "type": "string"
+    }
+  },
+  "required": ["meta", "payload"],
+  "additionalProperties": false
+}
