@@ -8,11 +8,11 @@ Thumbs.db
 node_modules/
 
 # Configuration
-wp-config.php
 .env
 .env.*
 .dumps/*
 .mariadb/*
+!wp-config.php
 
 # WordPress Core
 /wp-admin/
@@ -43,3 +43,4 @@ wp-content/plugins/*
 # ...AUẞER deine eigenen Custom-Plugins:
 !wp-content/plugins/vizoo*
 !wp-content/plugins/ajax-search-pro/
+!wp-content/mu-plugins
