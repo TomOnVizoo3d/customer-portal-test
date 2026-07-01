@@ -1,0 +1,3 @@
+[submodule "shared/auth"]
+    path = shared/auth
+    url = https://github.com/vizoogmbh/auth.git
