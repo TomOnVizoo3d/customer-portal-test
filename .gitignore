@@ -1,46 +1,51 @@
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Application
+# Ignore all unknown folders e.g. the ones created by cookie banner
+web/app/*
+!web/app/mu-plugins
+!web/app/plugins
+!web/app/themes
+# 
+#
+#
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+!web/app/plugins/vizoo-*
+!web/app/plugins/ajax-search-pro
+# Ignore Composer-installed mu-plugin directories; single-file mu-plugins are tracked intentionally
+web/app/mu-plugins/*/
+web/app/themes/twentytwentyfive/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
 
-# Dependencies
-/vendor/
-node_modules/
+# WordPress
+web/wp
+web/.htaccess
+web/index.php
+web/wp-config.php
 
-# Configuration
+# Logs
+*.log
+
+# Dotenv
 .env
-.env
-.dumps/*
-.mariadb/*
+.env.*
+!.env.example
 
-# WordPress Core
-/wp-admin/
-/wp-includes/
-/wp-*.php
-/index.php
-/xmlrpc.php
-/license.txt
-/readme.html
-!wp-config.php
+# Composer
+/vendor
+auth.json
 
-# Erlaube Git, wp-content zu betreten, aber ignoriere standardmäßig den Inhalt
-!wp-content/
-wp-content/*
+# PHPUnit/Pest
+phpunit.xml
+.phpunit.result.cache
+.phpunit.cache
 
-# Cache & Backups explizit ignorieren
-wp-content/cache/
-wp-content/backup*/
+# WP-CLI
+wp-cli.local.yml
 
-# Erlaube den Themes-Ordner, ignoriere alle Themes, außer 'vizoo'
-!wp-content/themes/
-wp-content/themes/*
-!wp-content/themes/vizoo/
-
-# Erlaube den Plugins-Ordner, ignoriere alle Plugins...
-!wp-content/plugins/
-wp-content/plugins/*
-
-# ...AUẞER deine eigenen Custom-Plugins:
-!wp-content/plugins/vizoo*
-!wp-content/plugins/ajax-search-pro/
-!wp-content/mu-plugins
+# Local
+.mariadb
+.dumps
+shared
